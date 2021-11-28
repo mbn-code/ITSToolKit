@@ -3,6 +3,43 @@ import os
 import time            
 import platform
 
+def hashing():
+    import hashlib
+
+    print("hashing types:")
+    print("md5\nsha1\n")
+
+
+    which_hash_type = input("Which hash type do you want to hash your string in?: ")
+
+    hashinput = input("plain text: ")
+
+    def md5_hash(data):
+        hash_object = hashlib.md5()
+        hash_object.update(str(data).encode())
+        print("hash ", hash_object.hexdigest())
+
+
+    def sha1_hash(data):
+        hash_object = hashlib.sha1()
+        hash_object.update(str(data).encode())
+        print("hash ", hash_object.hexdigest())
+
+
+    def choose():
+        if hashinput == None:
+            print("Enter hash type md5, or sha1")
+        elif which_hash_type.lower() == "md5":
+            md5_hash(data=hashinput)
+        elif which_hash_type.lower() == "sha1":
+            sha1_hash(data=hashinput)
+        else:
+            pass
+            
+    if __name__ ==  '__main__':
+        choose()
+
+
 def ITSToolKit(command: str) -> None:
     match command.split():
         case ["help"]:
@@ -12,6 +49,7 @@ whois, -ws - gain information about a domain or ip
 dig, -dg - query dns or ip
 exit, quit, stop - exit/quit/stop the Tool
 cat, -sc - show the contense of a file
+hash, -hs - hash encode a plain text string
                   """)
         case ["clear" | "cls" | "clean"]:
             print("exec: " + str(command))
@@ -22,8 +60,7 @@ cat, -sc - show the contense of a file
             IP_input = input("IP, or domain: ")
             
             if IP_input == None:
-                print("whois, missing parament (ex: IP, domain)")
-            else:
+
                 os.system(f"whois {IP_input}")
         
         case ["-dg"]:
@@ -47,12 +84,16 @@ cat, -sc - show the contense of a file
             time.sleep(0.2)
             quit()
             
-        case ["ls"]:
+        case ["ls" | "l" | "ll"]:
             os.system("ls")
         case ["ls", *rest]:
             if "-l" in rest:
                 os.system("ls -l")
         
+        case ["hash" | "-hs"]:
+            hashing() 
+        
+
         case _:
             if 1 == 1:
                 print(f"If the system command {command!r} did not run, try installing with sudo apt install {command!r} or sudo pacman -S {command!r}")
