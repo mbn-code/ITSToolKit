@@ -1,4 +1,4 @@
-# | pIPe symb 
+# | pIPe symbol 
 import os
 import time            
 import platform
@@ -125,7 +125,6 @@ ls, l, ll - show the contense of current folder
                 print("Sum: ", int(num1) / int(num2))
 
 
-
         case ["cd", path]:
             if path == None:
                 print(f"No directory {path}")
@@ -138,7 +137,7 @@ ls, l, ll - show the contense of current folder
                 print(f"If the system command {command!r} did not run, try installing with sudo apt install {command!r} or sudo pacman -S {command!r}")
                 os.system(command)
             else:
-                print(f"Unknown commmand: {command!r}.")
+                print(f"Unknown command: {command!r}.")
                     
               
 def main() -> None:
