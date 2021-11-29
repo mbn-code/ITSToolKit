@@ -125,6 +125,7 @@ ls, l, ll - show the contense of current folder
                 print("Sum: ", int(num1) / int(num2))
 
 
+
         case ["cd", path]:
             if path == None:
                 print(f"No directory {path}")
