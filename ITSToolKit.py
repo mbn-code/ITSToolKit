@@ -71,7 +71,7 @@ hash, -hs - hash encode a plain text string
             else:
                 os.system(f"dig {IP_input}")
         
-        case ["whoami" | "-ami"]:
+        case ["whoami" | "-ami" | "ami"]:
             print(f"ITSToolKit $ user $ {platform.node()}")
         
         case ["-sc"]:
