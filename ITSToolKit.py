@@ -92,7 +92,11 @@ hash, -hs - hash encode a plain text string
         
         case ["hash" | "-hs"]:
             hashing() 
-        
+        case ["cd", path]:
+            if path == None:
+                print(f"No directory 'None' ")
+            else:
+                os.chdir(str(path))
 
         case _:
             if 1 == 1:
