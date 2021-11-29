@@ -50,6 +50,9 @@ dig, -dg - query dns or ip
 exit, quit, stop - exit/quit/stop the Tool
 cat, -sc - show the contense of a file
 hash, -hs - hash encode a plain text string
+calculator, cal - simple calculator
+cd - change directory to another path
+ls, l, ll - show the contense of current folder 
                   """)
         case ["clear" | "cls" | "clean"]:
             print("exec: " + str(command))
@@ -84,15 +87,50 @@ hash, -hs - hash encode a plain text string
             time.sleep(0.2)
             quit()
             
+            
         case ["ls" | "l" | "ll"]:
             os.system("ls")
-        case ["ls", *rest]:
+        case ["ls", path, *rest]:
             if "-l" in rest:
                 os.system("ls -l")
         
         case ["hash" | "-hs"]:
             hashing() 
         
+        
+        case ["cal" | "calculator"]:
+            math_option = input("Which math option do you want (+/-/*/'/')?: ")
+
+            if math_option.lower() == "+":
+                num1 = input("Num1: ")
+                num2 = input("Num2: ")
+                print("Sum: ", int(num1) + int(num2))
+
+            
+            elif math_option.lower() == "-":
+                num1 = input("Num1: ")
+                num2 = input("Num2: ")
+                print("Sum: ", int(num1) - int(num2))
+            
+            
+            elif math_option.lower() == "*":
+                num1 = input("Num1: ")
+                num2 = input("Num2: ")
+                print("Sum: ", int(num1) * int(num2))
+            
+            
+            elif math_option.lower() == "/":
+                num1 = input("Num1: ")
+                num2 = input("Num2: ")
+                print("Sum: ", int(num1) / int(num2))
+
+
+        case ["cd", path]:
+            if path == None:
+                print(f"No directory {path}")
+            else:
+                os.chdir(str(path))
+
 
         case _:
             if 1 == 1:
