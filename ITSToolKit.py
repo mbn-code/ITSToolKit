@@ -145,10 +145,11 @@ python, python3 - run python shell in the toolkit (2 and 3)
         case _:
             if 1 == 1:
                 print(f"If the system command {command!r} did not run, try installing with sudo apt install {command!r} or sudo pacman -S {command!r}")
+                print(f"If you are running mac, try installing with brew: brew install {command!r}")
                 os.system(command)
             else:
                 print(f"Unknown command: {command!r}.")
-                    
+
               
 def main() -> None:
     while 1:
