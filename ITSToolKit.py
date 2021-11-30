@@ -84,10 +84,14 @@ python, python3 - run python shell in the toolkit (2 and 3)
             
         
         case ["exit" | "quit" | "stop"]:
-            print("Quitting ITSToolKit")
-            time.sleep(0.2)
-            quit()
-            
+            ask = input("Do you really want to quit?")
+            if ask.lower() == "n":
+                quit()
+            elif ask.lower() == "y":        
+                print("Quitting ITSToolKit")
+                time.sleep(0.2)
+                quit()
+                
             
         case ["ls" | "l" | "ll"]:
             os.system("ls")
