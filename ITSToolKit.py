@@ -84,14 +84,14 @@ python, python3 - run python shell in the toolkit (2 and 3)
             
         
         case ["exit" | "quit" | "stop"]:
-            ask = input("Do you really want to quit?")
-            if ask.lower() == "n":
+            ask = input("Do you really want to quit?(y/n): ")
+            if ask.lower() == "n" or "no":
                 quit()
-            elif ask.lower() == "y":        
+            elif ask.lower() == "y" or "yes":        
                 print("Quitting ITSToolKit")
                 time.sleep(0.2)
                 quit()
-                
+
             
         case ["ls" | "l" | "ll"]:
             os.system("ls")
