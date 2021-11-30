@@ -1,7 +1,10 @@
 # ITSToolKit
 This is the Indian Tech Support Tool Kit "ITSToolKit".
-This toolkit uses python 3.10, you can't use any other version because it's using the new "case" in python 3.10 
+This toolkit uses python 3.10, you can't use any other version because it's using the new match "case" in python 3.10 
+Right now I am not able to compile it to a bash file so the tool kit wouldbe callable from anywhere. 
+
 Thanks for using and enjoy the tool kit.
+
 
 ![Screenshot](Other-python-icon.png)
 
