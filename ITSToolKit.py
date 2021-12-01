@@ -53,7 +53,7 @@ hash, -hs - hash encode a plain text string
 calculator, cal - simple calculator
 cd - change directory to another path
 ls, l, ll - show the contense of current folder 
-python, python3 - run python shell in the toolkit (2 and 3)
+python, python3 - run python shell in the toolkit (2 and 3) - you are able to run python files from terminal
                   """)
         case ["clear" | "cls" | "clean"]:
             print("exec: " + str(command))
