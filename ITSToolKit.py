@@ -2,7 +2,7 @@
 import os
 import time            
 import platform
-import calender
+import calendar
 
 def hashing():
     import hashlib
@@ -45,16 +45,17 @@ def ITSToolKit(command: str) -> None:
     match command.split():
         case ["help"]:
             print("""
-help, -h - show this menu
-whois, -ws - gain information about a domain or ip
-dig, -dg - query dns or ip
-exit, quit, stop - exit/quit/stop the Tool
-cat, -sc - show the contense of a file
-hash, -hs - hash encode a plain text string
-calculator, cal - simple calculator
-cd - change directory to another path
-ls, l, ll - show the contense of current folder 
-python, python3 - run python shell in the toolkit (2 and 3) - you are able to run python files from terminal
+help, -h - show this menu.
+whois, -ws - gain information about a domain or ip.
+dig, -dg - query dns or ip.
+exit, quit, stop - exit/quit/stop the Tool.
+cat, -sc - show the contense of a file.
+hash, -hs - hash encode a plain text string.
+calculator, cal - simple calculator.
+cd - change directory to another path.
+ls, l, ll - show the contense of current folder.
+python, python3 - run python shell in the toolkit (2 and 3) - you are able to run python files from terminal.
+date - show the current time and calender.
                   """)
         case ["clear" | "cls" | "clean"]:
             print("exec: " + str(command))
@@ -143,11 +144,21 @@ python, python3 - run python shell in the toolkit (2 and 3) - you are able to ru
             else:
                 os.system("python")
 
-        case ["date"]:
-            print(calender)
+        case ["date"]:            
+            current_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
+            print(f"Current date is {current_time}")
+            
+            year = input("Year: ")
+            month = input("Month: ")
+            day = input("Day: ")
+            print(calendar.month(int(year),int(month)), int(day))
+            
+        case ["time"]:
+            current_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
+            print(f"Current date is {current_time}")
 
+            
         case _:
-
             if __name__ == "__main__":
                 print(f"If the system command {command!r} did not run, try installing with sudo apt install {command!r} or sudo pacman -S {command!r}")
                 print(f"If you are running mac, try installing with brew: brew install {command!r}")
