@@ -143,6 +143,9 @@ python, python3 - run python shell in the toolkit (2 and 3) - you are able to ru
                 os.system("python")
 
         case _:
+            if command == "msfconsole" or "metasploit" or "msfvenom":
+                print("try insatlling metasploit-framework linux (debian): 'sudo apt install metasploit', linux (arch): 'sudo pacman -S metasploit', mac: brew install metasploit")
+                print("Or install from source: https://github.com/rapid7/metasploit-framework")
             if 1 == 1:
                 print(f"If the system command {command!r} did not run, try installing with sudo apt install {command!r} or sudo pacman -S {command!r}")
                 print(f"If you are running mac, try installing with brew: brew install {command!r}")
