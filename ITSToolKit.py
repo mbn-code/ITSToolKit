@@ -2,6 +2,7 @@
 import os
 import time            
 import platform
+import calender
 
 def hashing():
     import hashlib
@@ -142,11 +143,12 @@ python, python3 - run python shell in the toolkit (2 and 3) - you are able to ru
             else:
                 os.system("python")
 
+        case ["date"]:
+            print(calender)
+
         case _:
-            if command == "msfconsole" or "metasploit" or "msfvenom":
-                print("try insatlling metasploit-framework linux (debian): 'sudo apt install metasploit', linux (arch): 'sudo pacman -S metasploit', mac: brew install metasploit")
-                print("Or install from source: https://github.com/rapid7/metasploit-framework")
-            if 1 == 1:
+
+            if __name__ == "__main__":
                 print(f"If the system command {command!r} did not run, try installing with sudo apt install {command!r} or sudo pacman -S {command!r}")
                 print(f"If you are running mac, try installing with brew: brew install {command!r}")
                 os.system(command)
