@@ -1,0 +1,17 @@
+/ Note /
+
+When using this software you have to install some other tools for it to work proberly, as if they are not installed already the tool will break sometimes.
+You can either install the secondary software yourself manually by insatlling the software that is listed below, or install it automatically with the 2 files provided 
+
+Pip3 (This has to be installed with pip3, this has to be installed together with either Debian or Arch.) e.g: pip3 insatll -r requirements.txt
+Debian: "AptInstallRequirements.py" e.g: python3 AptInstallRequirements.py
+Arch: "PacmanInstallReqirements.py" e.g: python3 PacmanInstallReqirements.py
+
+/ Software to install /
+
+
+
+
+
+
+/ 
