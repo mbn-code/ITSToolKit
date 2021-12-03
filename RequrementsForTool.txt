@@ -7,11 +7,29 @@ Pip3 (This has to be installed with pip3, this has to be installed together with
 Debian: "AptInstallRequirements.py" e.g: python3 AptInstallRequirements.py
 Arch: "PacmanInstallReqirements.py" e.g: python3 PacmanInstallReqirements.py
 
-/ Software to install /
+/ Software to install - This is both the Debian, Arch and pip3 commands you'll have to enter in your command shell to install manually if auto installers doesn't work  
+
+PIP3 { 
+
+pip3 install os
+pip3 install time
+pip3 install platform
+pip3 install calendar
+pip3 install hashlib
+
+}
 
 
+Debian {
 
+apt install neofetch
 
+}
 
+Arch {
+
+pacman -S neofetch
+
+}
 
 / 
