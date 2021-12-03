@@ -24,3 +24,5 @@ Preview for toolkit
 ![Screenshot](Preview.png)
 
 ![Screenshot](ReqForTool.png)
+
+Can also be found ![here](RequrementsForTool.txt)
