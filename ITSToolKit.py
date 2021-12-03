@@ -169,9 +169,11 @@ date - show the current time and calender.
               
 def main() -> None:
     while 1:
-        command = input("$ ")
+        command = input(platform.node() + " ~$ ")
         ITSToolKit(command)
         
         
 if __name__ == "__main__":
+    os.system("neofetch")
+    print("Welcome " + platform.node())
     main()
