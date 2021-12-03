@@ -1,35 +1,36 @@
-/ Note /
 
-When using this software you have to install some other tools for it to work proberly, as if they are not installed already the tool will break sometimes.
-You can either install the secondary software yourself manually by insatlling the software that is listed below, or install it automatically with the 2 files provided 
+    / Note /
 
-Pip3 (This has to be installed with pip3, this has to be installed together with either Debian or Arch.) e.g: pip3 insatll -r requirements.txt
-Debian: "AptInstallRequirements.py" e.g: python3 AptInstallRequirements.py
-Arch: "PacmanInstallReqirements.py" e.g: python3 PacmanInstallReqirements.py
+    When using this software you have to install some other tools for it to work proberly, as if they are not installed already the tool will break sometimes.
+    You can either install the secondary software yourself manually by insatlling the software that is listed below, or install it automatically with the 2 files provided 
 
-/ Software to install - This is both the Debian, Arch and pip3 commands you'll have to enter in your command shell to install manually if auto installers doesn't work  
+    Pip3 (This has to be installed with pip3, this has to be installed together with either Debian or Arch.) e.g: pip3 insatll -r requirements.txt
+    Debian: "AptInstallRequirements.py" e.g: python3 AptInstallRequirements.py
+    Arch: "PacmanInstallReqirements.py" e.g: python3 PacmanInstallReqirements.py
 
-PIP3 { 
+    / Software to install - This is both the Debian, Arch and pip3 commands you'll have to enter in your command shell to install manually if auto installers doesn't work  
 
-pip3 install os
-pip3 install time
-pip3 install platform
-pip3 install calendar
-pip3 install hashlib
+    PIP3 { 
 
-}
+    pip3 install os
+    pip3 install time
+    pip3 install platform
+    pip3 install calendar
+    pip3 install hashlib
+
+    }
 
 
-Debian {
+    Debian {
 
-apt install neofetch
+    apt install neofetch
 
-}
+    }
 
-Arch {
+    Arch {
 
-pacman -S neofetch
+    pacman -S neofetch
 
-}
+    }
 
-/ 
+    / 
