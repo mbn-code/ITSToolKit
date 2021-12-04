@@ -8,9 +8,11 @@ Thanks for using and enjoy the tool kit.
 
 ![Screenshot](Other-python-icon.png)
 
-
-```clone
+Instructions for installing (CLI)
+```
 git clone https://github.com/CollinEdward/ITSToolKit.git
+cd ITSToolKit
+python3 AptInstaller.py or python3 PacmanInstallerReq.py
 ```
 
 

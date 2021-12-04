@@ -158,12 +158,13 @@ time - only get the current time without the calender preview.
             current_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
             print(f"Current date is {current_time}")
 
-            
+
         case _:
             if __name__ == "__main__":
                 print(f"If the system command {command!r} did not run, try installing with sudo apt install {command!r} or sudo pacman -S {command!r}")
                 print(f"If you are running mac, try installing with brew: brew install {command!r}")
                 os.system(command)
+                
               
 def main() -> None:
     while 1:
