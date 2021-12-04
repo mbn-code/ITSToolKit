@@ -57,6 +57,7 @@ ls, l, ll - show the contense of current folder.
 python, python3 - run python shell in the toolkit (2 and 3) - you are able to run python files from terminal.
 date - show the current time and calender.
 time - only get the current time without the calender preview.
+neofetch - shows system specifications, uptime, Kernel, GPU, CPU, Resolution etc.
                   """)
         case ["clear" | "cls" | "clean"]:
             print("exec: " + str(command))
