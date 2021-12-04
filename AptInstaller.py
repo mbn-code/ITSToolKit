@@ -18,9 +18,6 @@ def install():
     os.system("sudo apt install neofetch")
     
     
-    
-    
-    
 def uninstall():
     
     # remove the pip3 requirements
@@ -33,6 +30,8 @@ def uninstall():
     # Now uninstall Apt requirements
     os.system("sudo apt remove neofetch")
     
+    
+    # remove the ITSToolKit py and sh
     os.system("sudo rm -r ~/bin/ITSToolKit.py")
     os.system("sudo rm -r ~/bin/ITSToolKit.sh")
     
