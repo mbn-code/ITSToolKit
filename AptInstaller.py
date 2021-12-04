@@ -16,6 +16,7 @@ def install():
     
     # Now install Apt requirements
     os.system("sudo apt install neofetch")
+    os.system("sudo apt install base64")
     
     
 def uninstall():
@@ -29,7 +30,7 @@ def uninstall():
     
     # Now uninstall Apt requirements
     os.system("sudo apt remove neofetch")
-    
+    os.system("sudo apt remove base64")
     
     # remove the ITSToolKit py and sh
     os.system("sudo rm -r ~/bin/ITSToolKit.py")

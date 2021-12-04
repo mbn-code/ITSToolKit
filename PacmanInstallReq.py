@@ -16,6 +16,7 @@ def install():
     
     # Now install Apt requirements
     os.system("sudo pacman -S neofetch")
+    os.system("sudo pacman -S base64")
     
 def uninstall():
     
@@ -32,8 +33,8 @@ def uninstall():
     os.system("sudo rm -r ~/bin/ITSToolKit.sh")
     
     # Now uninstall Apt requirements
-    os.system("sudo pacman remove neofetch")
-    
+    os.system("sudo pacman -R neofetch")
+    os.system("sudo pacman -R base64")
 
 if __name__ == "__main__":
     xinput = input("Install or uninstall: ")
