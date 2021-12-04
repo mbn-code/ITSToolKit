@@ -1,2 +1,2 @@
 #!/bin/sh
-python3.10 ITSToolKit.py
+python3.10 /bin/ITSToolKit.py
