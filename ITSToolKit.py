@@ -137,6 +137,8 @@ neofetch - shows system specifications, uptime, Kernel, GPU, CPU, Resolution etc
         case ["cd", path]:
             if path == None:
                 print(f"No directory {path}")
+            elif FileNotFoundError:
+                print(f"No Directory {path}")
             else:
                 os.chdir(str(path))
 
@@ -162,6 +164,13 @@ neofetch - shows system specifications, uptime, Kernel, GPU, CPU, Resolution etc
         case ["neofetch"]:
             os.system("neofetch")
 
+        case ["base64", path]:
+            if path == None or "" or " ":
+                print(f"No directory {path}")
+            else:
+                os.system(f"base64 {path}")
+
+            
         case _:
             if __name__ == "__main__":
                 print(f"If the system command {command!r} did not run, try installing with sudo apt install {command!r} or sudo pacman -S {command!r}")
