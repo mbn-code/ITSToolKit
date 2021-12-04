@@ -1,6 +1,11 @@
 import os
 
 def install():
+
+
+    # Move the ITSToolKit.sh to the /bin/ directory
+    os.system("sudo mv ITSToolKit.py ~bin/")
+    os.system("sudo mv ITSToolKit.sh ~bin/")
     
     # Install the pip3 requirements
     os.system("pip3 install os")
@@ -11,6 +16,10 @@ def install():
     
     # Now install Apt requirements
     os.system("sudo apt install neofetch")
+    
+    
+    
+    
     
 def uninstall():
     
@@ -24,12 +33,13 @@ def uninstall():
     # Now uninstall Apt requirements
     os.system("sudo apt remove neofetch")
     
+    os.system("sudo rm -r ~/bin/ITSToolKit.py")
+    os.system("sudo rm -r ~/bin/ITSToolKit.sh")
+    
 
 if __name__ == "__main__":
-    print("Apt installer / uninstaller")
-    x_input = input("Do you want to install or uninstall?(I/UI): ")
-
-    if x_input.lower == "i":
+    xinput = input("Install or uninstall: ")
+    
+    if xinput.lower() == "i" or "install":
         install()
-    elif x_input.lower() == "ui":
-        uninstall()
+    else: uninstall()
