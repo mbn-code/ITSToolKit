@@ -32,7 +32,7 @@ def uninstall():
     os.system("sudo rm -r ~/bin/ITSToolKit.sh")
     
     # Now uninstall Apt requirements
-    os.system("sudo apt remove neofetch")
+    os.system("sudo pacman remove neofetch")
     
 
 if __name__ == "__main__":
