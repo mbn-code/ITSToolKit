@@ -1,7 +1,8 @@
 # ITSToolKit
 This is the Indian Tech Support Tool Kit "ITSToolKit".
 This toolkit uses python 3.10, you can't use any other version because it's using the new match "case" in python 3.10 
-Right now I am not able to compile it to a bash file so the tool kit is callable from anywhere. 
+If you want to use the toolkit by just typing "ITSToolKit" add the ITSToolKit.py and ITSToolKit.sh to /bin/ folder.
+You can either do that manually or use the AptInstaller.py or PacmanInstallerReq.py (Depending on Distribution ) file to it automatically for you, and also install all the requirements for the toolkit.
 
 Thanks for using and enjoy the tool kit.
 
