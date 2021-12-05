@@ -29,7 +29,7 @@ https://computingforgeeks.com/how-to-install-python-on-ubuntu-linux-system/
 
 Preview for toolkit
 
-![Screenshot](Preview_w_neofetch.png)
+![Screenshot](Preview_colours.png)
 
 ![Screenshot](ReqForTool.png)
 
