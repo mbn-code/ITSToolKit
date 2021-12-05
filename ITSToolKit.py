@@ -171,6 +171,8 @@ base64 - encrypt or decrypt any contense within a file with the base64 (path) co
             else:
                 os.system(f"base64 {path}")
 
+        case ["version"]:
+            print("Version: 1.54")
             
         case _:
             if __name__ == "__main__":
