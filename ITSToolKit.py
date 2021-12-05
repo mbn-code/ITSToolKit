@@ -181,7 +181,12 @@ base64 - encrypt or decrypt any contense within a file with the base64 (path) co
               
 def main() -> None:
     while 1:
-        command = input(platform.node() + " ~$ ")
+        CRED = '\033[91m'
+        CEND = '\033[0m'
+        
+        CBLUE   = '\33[34m'
+        
+        command = input(CRED + str(platform.node()) + CEND + CBLUE + " ~$ " + CBLUE)
         ITSToolKit(command)
         
         
