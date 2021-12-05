@@ -40,6 +40,23 @@ def hashing():
     if __name__ ==  '__main__':
         choose()
 
+def FibNums():
+    numbs2Print = input("Fibonacci numbers to print: ")
+    print(f"Printing the first {numbs2Print} fibonacci numbers")
+    def printFibonacciNumbers(n: int) -> None:
+        f1 = 0
+        f2 = 1
+        if (n < 1):
+            return
+        print(f1)
+        for x in range(1, n):
+            print(f2)
+            next = f1 + f2
+            f1 = f2
+            f2 = next
+
+    printFibonacciNumbers(int(numbs2Print))
+
 
 def ITSToolKit(command: str) -> None:
     match command.split():
@@ -170,6 +187,11 @@ base64 - encrypt or decrypt any contense within a file with the base64 (path) co
                 print(f"No directory {path}")
             else:
                 os.system(f"base64 {path}")
+
+
+        case ["Fib" | "fib" | "Fibonacci" | "-fn"]:
+            FibNums()
+
 
         case ["version"]:
             print("Version: 1.54")
