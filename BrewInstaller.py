@@ -1,3 +1,5 @@
+# This has not been tested yet.
+
 import os
 
 def install():
