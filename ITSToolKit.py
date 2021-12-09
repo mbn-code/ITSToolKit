@@ -4,7 +4,7 @@ import time
 import platform
 import calendar
 import socket
-import platform,socket,re,psutil
+import platform,socket,re,psutil, uuid
 
 def hashing():
     import hashlib
