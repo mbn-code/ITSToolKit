@@ -41,6 +41,7 @@ def hashing():
         choose()
 
 def FibNums():
+    global numbs2Print
     numbs2Print = input("Fibonacci numbers to print: ")
     print(f"Printing the first {numbs2Print} fibonacci numbers")
     def printFibonacciNumbers(n: int) -> None:
@@ -56,6 +57,18 @@ def FibNums():
             f2 = next
 
     printFibonacciNumbers(int(numbs2Print))
+
+def Computer_information_specific():
+    global ToolVersion
+    ToolVersion = "1.55"
+    print(f"""
+ITSToolKit version: {ToolVersion}
+Computer name: {platform.node()}
+Python compiler: {platform.python_compiler()}
+    """)
+
+def Computer_information_simple():
+    pass
 
 
 def ITSToolKit(command: str) -> None:
@@ -76,6 +89,8 @@ date - show the current time and calender.
 time - only get the current time without the calender preview.
 neofetch - shows system specifications, uptime, Kernel, GPU, CPU, Resolution etc.
 base64 - encrypt or decrypt any contense within a file with the base64 (path) command. 
+fib, fibonacci - This will print the amount given numbers of the fobinacci numbers.
+whatis - This should be a native command in macOS
                   """)
         case ["clear" | "cls" | "clean"]:
             print("exec: " + str(command))
@@ -103,7 +118,6 @@ base64 - encrypt or decrypt any contense within a file with the base64 (path) co
         case ["-sc"]:
             filepath = input("Path/ : ")
             os.system(f"cat {filepath}")
-            
         
         case ["exit" | "quit" | "stop"]:
             ask = input("Do you really want to quit?(y/n): ")
@@ -191,11 +205,20 @@ base64 - encrypt or decrypt any contense within a file with the base64 (path) co
 
         case ["Fib" | "fib" | "Fibonacci" | "-fn"]:
             FibNums()
+            print(f"Done printing {numbs2Print} fibonacci numbers.")
 
-
+        case ["inf" | "Information" | "-if", *rest]:
+            if "-m" or "--more":
+                # This just means that there will be more specific information given about the computer.
+                # This should maybe not be used in public as if someone sees the output, and you have a outdated version of something
+                # Then they can exploit it
+                Computer_information_specific()
+            else: 
+                Computer_information_simple()
 
         case ["version"]:
-            print("Version: 1.54")
+            ToolVersion_1 = ToolVersion 
+            print(f"Version {ToolVersion_1}")
             
         case _:
             if __name__ == "__main__":
@@ -208,14 +231,17 @@ def main() -> None:
     while 1:
         CRED = '\033[91m'
         CEND = '\033[0m'
-        
         CBLUE   = '\33[34m'
-        
+        print(CRED + "_"*len(platform.node()) + CRED)
         command = input(CRED + str(platform.node()) + CEND + CBLUE + " ~$ " + CBLUE)
+        print(CRED + "_"*len(platform.node()) + CRED)
         ITSToolKit(command)
         
         
 if __name__ == "__main__":
+    CRED = '\033[91m'
     os.system("neofetch")
+    print(CRED + "_"*40 + CRED)
     print("Welcome " + platform.node())
+    print(CRED + "_"*40 + CRED)
     main()
