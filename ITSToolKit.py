@@ -202,6 +202,10 @@ whatis - This should be a native command in macOS
             else:
                 os.system(f"base64 {path}")
 
+        
+        case ["ping" | "-p", ip]:
+            os.system(f"ping {ip}")
+
 
         case ["Fib" | "fib" | "Fibonacci" | "-fn"]:
             FibNums()
