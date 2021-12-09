@@ -3,6 +3,8 @@ import os
 import time            
 import platform
 import calendar
+import socket
+import platform,socket,re,psutil
 
 def hashing():
     import hashlib
@@ -58,17 +60,29 @@ def FibNums():
 
     printFibonacciNumbers(int(numbs2Print))
 
+
 def Computer_information_specific():
     global ToolVersion
     ToolVersion = "1.55"
     print(f"""
 ITSToolKit version: {ToolVersion}
 Computer name: {platform.node()}
+Operating system: {platform.platform()}
+Operating system version: {platform.version()}
+Release: {platform.release()}
+Architecture: {platform.machine()} 
 Python compiler: {platform.python_compiler()}
-    """)
+Processor: {platform.processor()}
+Ram: {str(round(psutil.virtual_memory().total / (1024.0 **3)))+" GB"}
 
-def Computer_information_simple():
-    pass
+{"-"*len(platform.processor())}
+Networking information - private.
+
+Ip address: {socket.gethostbyname(socket.gethostname())}
+Mac address: {':'.join(re.findall('..', '%012x' % uuid.getnode()))}
+
+
+    """)
 
 
 def ITSToolKit(command: str) -> None:
@@ -212,13 +226,10 @@ whatis - This should be a native command in macOS
             print(f"Done printing {numbs2Print} fibonacci numbers.")
 
         case ["inf" | "Information" | "-if", *rest]:
-            if "-m" or "--more":
-                # This just means that there will be more specific information given about the computer.
-                # This should maybe not be used in public as if someone sees the output, and you have a outdated version of something
-                # Then they can exploit it
-                Computer_information_specific()
-            else: 
-                Computer_information_simple()
+            # This just means that there will be more specific information given about the computer.
+            # This should maybe not be used in public as if someone sees the output, and you have a outdated version of something
+            # Then they can exploit it
+            Computer_information_specific()
 
         case ["version"]:
             ToolVersion_1 = ToolVersion 
