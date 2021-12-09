@@ -75,13 +75,10 @@ Python compiler: {platform.python_compiler()}
 Processor: {platform.processor()}
 Ram: {str(round(psutil.virtual_memory().total / (1024.0 **3)))+" GB"}
 
-{"-"*len(platform.processor())}
 Networking information - private.
 
 Ip address: {socket.gethostbyname(socket.gethostname())}
 Mac address: {':'.join(re.findall('..', '%012x' % uuid.getnode()))}
-
-
     """)
 
 
