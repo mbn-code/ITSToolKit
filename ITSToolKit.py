@@ -88,8 +88,6 @@ Interface: {socket.if_nameindex()}
     """)
     os.system("ifconfig")
 
-
-
 def ITSToolKit(command: str) -> None:
     match command.split():
         case ["help"]:
@@ -108,8 +106,10 @@ date - show the current time and calender.
 time - only get the current time without the calender preview.
 neofetch - shows system specifications, uptime, Kernel, GPU, CPU, Resolution etc.
 base64 - encrypt or decrypt any contense within a file with the base64 (path) command. 
-fib, fibonacci - This will print the amount given numbers of the fobinacci numbers.
+fib, fibonacci - This will print the amount given numbers of the fibonacci numbers.
 whatis - This should be a native command in macOS
+inf, information, -if - Get information about computer specifications and networking information.
+
 """)
         case ["clear" | "cls" | "clean"]:
             print("exec: " + str(command))
