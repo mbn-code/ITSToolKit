@@ -1,10 +1,13 @@
-# | pIPe symbol 
-import os
-import time            
-import platform
+# Imports.
 import calendar
+import os
+import platform
+import re
 import socket
-import platform,socket,re,psutil, uuid
+import time
+import uuid
+import psutil
+
 
 def hashing():
     import hashlib
@@ -238,7 +241,6 @@ whatis - This should be a native command in macOS
                 print(f"If you are running mac, try installing with brew: brew install {command!r}")
                 os.system(command)
 
-              
 def main() -> None:
     while 1:
         CRED = '\033[91m'
