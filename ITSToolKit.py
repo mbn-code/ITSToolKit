@@ -188,8 +188,6 @@ inf, information, -if - Get information about computer specifications and networ
         case ["cd", path]:
             if path == None:
                 print(f"No directory {path}")
-            elif FileNotFoundError:
-                print(f"No Directory {path}")
             else:
                 os.chdir(str(path))
 
