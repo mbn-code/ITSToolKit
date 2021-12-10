@@ -67,6 +67,8 @@ def FibNums():
 def Computer_information_specific():
     global ToolVersion
     ToolVersion = "1.55"
+    addrs = psutil.net_if_addrs()
+    
     print(f"""
 ITSToolKit version: {ToolVersion}
 Computer name: {platform.node()}
@@ -82,7 +84,10 @@ Networking information - private.
 
 Ip address: {socket.gethostbyname(socket.gethostname())}
 Mac address: {':'.join(re.findall('..', '%012x' % uuid.getnode()))}
+Interface: {socket.if_nameindex()}
     """)
+    os.system("ifconfig")
+
 
 
 def ITSToolKit(command: str) -> None:
@@ -105,7 +110,7 @@ neofetch - shows system specifications, uptime, Kernel, GPU, CPU, Resolution etc
 base64 - encrypt or decrypt any contense within a file with the base64 (path) command. 
 fib, fibonacci - This will print the amount given numbers of the fobinacci numbers.
 whatis - This should be a native command in macOS
-                  """)
+""")
         case ["clear" | "cls" | "clean"]:
             print("exec: " + str(command))
             time.sleep(0.1)
