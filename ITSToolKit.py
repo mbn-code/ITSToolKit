@@ -7,11 +7,10 @@ import socket
 import time
 import uuid
 import psutil
+import hashlib
 
 
 def hashing():
-    import hashlib
-
     print("hashing types:")
     print("md5\nsha1\n")
 
@@ -41,15 +40,18 @@ def hashing():
             sha1_hash(data=hashinput)
         else:
             pass
-            
+
     if __name__ ==  '__main__':
         choose()
 
 def FibNums():
     global numbs2Print
     numbs2Print = input("Fibonacci numbers to print: ")
+    
     print(f"Printing the first {numbs2Print} fibonacci numbers")
     def printFibonacciNumbers(n: int) -> None:
+        # Check for n == 1 and + 1 if true
+        n==1;n+=1                       #|
         f1 = 0
         f2 = 1
         if (n < 1):
@@ -60,7 +62,7 @@ def FibNums():
             next = f1 + f2
             f1 = f2
             f2 = next
-
+            print("-"*50 + f" num: {x}")
     printFibonacciNumbers(int(numbs2Print))
 
 
@@ -68,7 +70,7 @@ def Computer_information_specific():
     global ToolVersion
     ToolVersion = "1.55"
     addrs = psutil.net_if_addrs()
-    
+
     print(f"""
 ITSToolKit version: {ToolVersion}
 Computer name: {platform.node()}
@@ -115,29 +117,27 @@ inf, information, -if - Get information about computer specifications and networ
             print("exec: " + str(command))
             time.sleep(0.1)
             os.system("clear")
-        
+
         case ["-ws"]:
             IP_input = input("IP, or domain: ")
-            
             if IP_input == None:
 
                 os.system(f"whois {IP_input}")
         
         case ["-dg"]:
             IP_input = input("IP or domain: ")
-            
             if IP_input == None:
                 print("Please input IP or domain (ex: 1.1.1.1 or google.com) ")
             else:
                 os.system(f"dig {IP_input}")
-        
+
         case ["whoami" | "-ami" | "ami"]:
             print(f"ITSToolKit $ user $ {platform.node()}")
-        
+
         case ["-sc"]:
             filepath = input("Path/ : ")
             os.system(f"cat {filepath}")
-        
+
         case ["exit" | "quit" | "stop"]:
             ask = input("Do you really want to quit?(y/n): ")
             if ask.lower() == "n" or "no":
@@ -147,17 +147,17 @@ inf, information, -if - Get information about computer specifications and networ
                 time.sleep(0.2)
                 quit()
 
-            
+
         case ["ls" | "l" | "ll"]:
             os.system("ls")
         case ["ls", path, *rest]:
             if "-l" in rest:
                 os.system("ls -l")
-        
+
         case ["hash" | "-hs"]:
             hashing() 
-        
-        
+
+
         case ["cal" | "calculator"]:
             math_option = input("Which math option do you want (+/-/*/'/')?: ")
 
@@ -166,19 +166,19 @@ inf, information, -if - Get information about computer specifications and networ
                 num2 = input("Num2: ")
                 print("Sum: ", int(num1) + int(num2))
 
-            
+
             elif math_option.lower() == "-":
                 num1 = input("Num1: ")
                 num2 = input("Num2: ")
                 print("Sum: ", int(num1) - int(num2))
-            
-            
+
+
             elif math_option.lower() == "*":
                 num1 = input("Num1: ")
                 num2 = input("Num2: ")
                 print("Sum: ", int(num1) * int(num2))
-            
-            
+
+
             elif math_option.lower() == "/":
                 num1 = input("Num1: ")
                 num2 = input("Num2: ")
@@ -253,8 +253,8 @@ def main() -> None:
         command = input(CRED + str(platform.node()) + CEND + CBLUE + " ~$ " + CBLUE)
         print(CRED + "_"*len(platform.node()) + CRED)
         ITSToolKit(command)
-        
-        
+
+
 if __name__ == "__main__":
     CRED = '\033[91m'
     os.system("neofetch")
