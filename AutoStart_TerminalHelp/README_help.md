@@ -3,4 +3,4 @@ If they are not installed the toolkit might still work, but not optimal, some fu
 
 With any popular Terminal Emulator, there should be a settings or profile tab, as seen below;
 
-![Screenshot](TermianlPreview.png)
+![Screenshot](TerminalPreview.png)
