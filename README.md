@@ -6,6 +6,10 @@ You can either do that manually or use the AptInstaller.py or PacmanInstallerReq
 
 Thanks for using and enjoy the tool kit.
 
+Autostart help
+![README file](AutoStart_TerminalHelp/README_help.md)
+
+
 Future updates {
 
 Adding an update command or file so you can easily get the newest version of the ToolKit, and don't have to manually download the script and run the Apt installer.
