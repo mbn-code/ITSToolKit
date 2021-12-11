@@ -12,7 +12,7 @@ import hashlib
 
 def hashing():
     print("hashing types:")
-    print("md5\nsha1\n")
+    print("md5\nsha1\nsha256\nsha512")
 
 
     which_hash_type = input("Which hash type do you want to hash your string in?: ")
@@ -29,6 +29,18 @@ def hashing():
         hash_object = hashlib.sha1()
         hash_object.update(str(data).encode())
         print("hash ", hash_object.hexdigest())
+        
+    def sha256(data):
+        hash_object = hashlib.sha256()
+        hash_object.update(str(data).encode())
+        print("hash ", hash_object.hexdigest())
+
+
+    def sha512(data):
+        hash_object = hashlib.sha512()
+        hash_object.update(str(data).encode())
+        print("hash ", hash_object.hexdigest())        
+
 
 
     def choose():
@@ -38,8 +50,10 @@ def hashing():
             md5_hash(data=hashinput)
         elif which_hash_type.lower() == "sha1":
             sha1_hash(data=hashinput)
-        else:
-            pass
+        elif which_hash_type.lower() == "sha256":
+            sha256(data=hashinput)
+        elif which_hash_type.lower() == "sha512":
+            sha512(data=hashinput)
 
     if __name__ ==  '__main__':
         choose()
