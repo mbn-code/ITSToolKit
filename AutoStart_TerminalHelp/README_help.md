@@ -33,4 +33,4 @@ And something like this, when you open Konsole (Or any other terminal that you d
 
 And then you are done with the steps of making it the startup script.
 
-If you want to temporarily use bash or zsh without changing "/bin/ITSToolKit" back to "/bin/bash/" or "/bin/zhs" you can type "bash" in the terminal, and your normalt bash terminal should appear, then you can type "exit" and it will return the ITSToolKit terminal. 
+If you want to temporarily use bash or zsh without changing "/bin/ITSToolKit" back to "/bin/bash/" or "/bin/zsh" you can type "bash" in the terminal, and your normal bash terminal should appear, then you can type "exit" and it will return the ITSToolKit terminal. 
