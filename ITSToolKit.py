@@ -68,7 +68,7 @@ def FibNums():
 
 def Computer_information_specific():
     global ToolVersion
-    ToolVersion = "1.55"
+    ToolVersion = "1.79"
     addrs = psutil.net_if_addrs()
 
     print(f"""
