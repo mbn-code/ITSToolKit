@@ -7,7 +7,7 @@ def install():
 
     # Move the ITSToolKit.sh to the /bin/ directory
     os.system("mv ITSToolKit.py ~bin/")
-    os.system("mv ITSToolKit.sh ~bin/")
+    os.system("mv ITSToolKit ~bin/")
     
     # Install the pip3 requirements
     os.system("pip3 install os")
