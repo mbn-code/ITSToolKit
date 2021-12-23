@@ -58,6 +58,7 @@ def hashing():
     if __name__ ==  '__main__':
         choose()
 
+# Function for printing the fibonacci numbers
 def FibNums():
     global numbs2Print
     numbs2Print = input("Fibonacci numbers to print: ")
@@ -65,7 +66,7 @@ def FibNums():
     print(f"Printing the first {numbs2Print} fibonacci numbers")
     def printFibonacciNumbers(n: int) -> None:
         # Check for n == 1 and + 1 if true
-        n==1;n+=1                       #|
+        n==1;n+=1                      
         f1 = 0
         f2 = 1
         if (n < 1):
