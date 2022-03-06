@@ -126,8 +126,8 @@ base64 - encrypt or decrypt any contense within a file with the base64 (path) co
 fib, fibonacci - This will print the amount given numbers of the fibonacci numbers.
 whatis - This should be a native command in macOS
 inf, information, -if - Get information about computer specifications and networking information.
-
 """)
+
         case ["clear" | "cls" | "clean"]:
             print("exec: " + str(command))
             time.sleep(0.1)
