@@ -1,39 +1,42 @@
+## Note
 
-    / Note /
+When using this software, you need to install additional tools for it to work properly. If these tools are not already installed, the software may break. You have two options for installing the secondary software:
 
-    When using this software you have to install some other tools for it to work proberly, as if they are not installed already the tool will break sometimes.
-    You can either install the secondary software yourself manually by insatlling the software that is listed below, or install it automatically with the 2 files provided 
+1. Manual Installation: Install the software listed below manually by executing the respective commands in your command shell.
+2. Automatic Installation: Use the provided scripts to install the software automatically.
 
-    Pip3 (This has to be installed with pip3, this has to be installed together with either Debian or Arch.) e.g: pip3 insatll -r requirements.txt
-    Debian: "AptInstallRequirements.py" e.g: python3 AptInstallRequirements.py
-    Arch: "PacmanInstallReqirements.py" e.g: python3 PacmanInstallReqirements.py
+To install the required software using pip3, run the following command:
 
-    / Software to install - This is both the Debian, Arch and pip3 commands you'll have to enter in your command shell to install manually if auto installers doesn't work  
+pip3 install -r requirements.txt
 
-    PIP3 { 
+For Debian-based systems, use the "AptInstallRequirements.py" script:
 
-    pip3 install os
-    pip3 install time
-    pip3 install platform
-    pip3 install calendar
-    pip3 install hashlib
+python3 AptInstallRequirements.py
 
-    }
+For Arch Linux-based systems, use the "PacmanInstallRequirements.py" script:
 
+python3 PacmanInstallRequirements.py
 
-    Debian {
+### Software to Install Manually
 
-    apt install neofetch
+#### PIP3
+You can install the following packages using pip3:
+```bash
+pip3 install os
+pip3 install time
+pip3 install platform
+pip3 install calendar
+pip3 install hashlib
+```
 
-    }
+Debian
 
-    Arch {
+To install the required package on Debian, use the following command:
 
-    pacman -S neofetch
+apt install neofetch
 
-    }
+Arch Linux
 
-    / 
+To install the required package on Arch Linux, use the following command:
 
-
-    
+pacman -S neofetch
