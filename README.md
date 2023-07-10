@@ -1,35 +1,36 @@
 # ITSToolKit
-This is the Indian Tech Support Tool Kit "ITSToolKit" Click here to go to the v1.080 release, this is the first stable build tested on multiple operating systems, and different hardware; Click here to go to download ![Link](https://github.com/CollinEdward/ITSToolKit/releases/tag/ITSToolKit).
-This toolkit uses python 3.10, you can't use any other version because it's using the new match "case" in python 3.10 
-If you want to use the toolkit by just typing "ITSToolKit" add the ITSToolKit.py and ITSToolKit.sh to /bin/ folder.
-You can either do that manually or use the AptInstaller.py or PacmanInstallerReq.py (Depending on Distribution ) file to it automatically for you, and also install all the requirements for the toolkit.
 
-Thanks for using and enjoy the tool kit.
+This is the Indian Tech Support Tool Kit "ITSToolKit". Click [here](https://github.com/CollinEdward/ITSToolKit/releases/tag/ITSToolKit) to go to the v1.080 release, which is the first stable build tested on multiple operating systems and different hardware.
 
-Autostart help
+**Note:** This toolkit requires Python 3.10. You cannot use any other version because it utilizes the new `match` "case" feature introduced in Python 3.10.
+
+If you want to use the toolkit by simply typing "ITSToolKit" in the terminal, follow these steps:
+
+1. Add `ITSToolKit.py` and `ITSToolKit.sh` to the `/bin/` folder.
+2. You can do this manually or use the `AptInstaller.py` or `PacmanInstallerReq.py` (depending on your distribution) file to automate the process. These files will also install all the required dependencies for the toolkit.
+
+Thank you for using ITSToolKit. Enjoy the toolkit!
+
+## Autostart Help
+
 ![README file](AutoStart_TerminalHelp/README_help.md)
 
-
-Future updates {
+## Future Updates
 
 Adding an update command or file so you can easily get the newest version of the ToolKit, and don't have to manually download the script and run the Apt installer.
 
-}
-
 ![Screenshot](Other-python-icon.png)
 
-Instructions for installing (CLI)
-```
+## Instructions for Installing (CLI)
+
+To install ITSToolKit via the command line interface (CLI), follow these steps:
+
+```bash
 git clone https://github.com/CollinEdward/ITSToolKit.git
 cd ITSToolKit
 python3 AptInstaller.py or python3 PacmanInstallerReq.py
 ```
 
-
-for instructions on installing python 3.10 on linux systems click on:
-```
-https://computingforgeeks.com/how-to-install-python-on-ubuntu-linux-system/
-```
 
 Preview for toolkit
 
@@ -38,4 +39,3 @@ Preview for toolkit
 ![Screenshot](ReqForTool.png)
 
 Can also be found ![here](RequrementsForTool.txt)
-
